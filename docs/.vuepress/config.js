@@ -1,25 +1,14 @@
 module.exports = {
-  title: "hello",
-  description: "一个学习网站",
+  title: "Tuzi",
+  description: "一曲肝肠断，天涯何处觅知音",
   theme: "reco",
   base: "/vue-press-tuzi/",
   themeConfig: {
     nav: [
-      { text: "首页", link: "/" },
-      // {
-      //   text: "xx的博客",
-      //   item: [
-      //     {
-      //       text: "掘金",
-      //       link: "地址",
-      //     },
-      //     {
-      //       text: "github",
-      //       link: "地址",
-      //     },
-      //   ],
-      // },
+      { text: "首页", link: "/", icon: "reco-home" },
+      { text: "时间线", link: "/timeline/", icon: "reco-date" },
     ],
+
     // sidebar: [
     //   {
     //     title: "积累成多",
@@ -52,24 +41,45 @@ module.exports = {
       //头部下拉
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: "博客", // 默认文案 “分类”
+        text: "文档", // 默认文案 “分类”
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认4
         text: "Tag", // 默认文案 “标签”
       },
+      socialLinks: [
+        {
+          icon: "reco-juejin",
+          link: "https://juejin.cn/user/435870010454062",
+        },
+        {
+          icon: "reco-github",
+          text: "11",
+          link: "https://github.com/2294069779",
+        },
+      ],
     },
-    locales: {
-      //时间格式
-      "/": {
-        lang: "zh-CN",
-      },
-    },
+    // locales: {
+    //   //时间格式
+    //   "/": {
+    //     lang: "zh-CN",
+    //   },
+    // },
     subSidebar: "auto",
     logo: "/logo.jpg",
     authorAvatar: "/logo.jpg",
     type: "blog",
     author: "tuzi",
+    vssueConfig: {
+      platform: "github",
+      owner: "OWNER_OF_REPO",
+      repo: "NAME_OF_REPO",
+      clientId: "YOUR_CLIENT_ID",
+      clientSecret: "YOUR_CLIENT_SECRET",
+    },
+    // mode: "dark",
+    // modePicker: false,
+    // 项目开始时间，只填写年份
   },
   plugins: [
     [
@@ -86,9 +96,8 @@ module.exports = {
     [
       "cursor-effects",
       {
-        size: 4, // size of the particle, default: 2
-        shape: "star", // ['star' | 'circle'], // shape of the particle, default: 'star'
-        zIndex: 999999999, // z-index property of the canvas, default: 999999999
+        size: 2, // size of the particle, default: 2
+        shape: "circle", // ['star' | 'circle'], // shape of the particle, default: 'star'
       },
     ],
     // 音乐
@@ -109,6 +118,15 @@ module.exports = {
         shrinkMode: "float",
         // 悬浮窗样式
         floatStyle: { bottom: "20px", "z-index": "999999" },
+      },
+    ],
+  ],
+  head: [
+    [
+      "meta",
+      {
+        name: "viewport",
+        content: "width=device-width,initial-scale=1,user-scalable=no",
       },
     ],
   ],

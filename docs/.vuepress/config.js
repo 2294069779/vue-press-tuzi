@@ -3,40 +3,21 @@ module.exports = {
   description: "一曲肝肠断，天涯何处觅知音",
   theme: "reco",
   base: "/vue-press-tuzi/",
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }], //favicon图标设置
+    [
+      "meta",
+      {
+        name: "viewport",
+        content: "width=device-width,initial-scale=1,user-scalable=no",
+      },
+    ],
+  ],
   themeConfig: {
     nav: [
       { text: "首页", link: "/", icon: "reco-home" },
       { text: "时间线", link: "/timeline/", icon: "reco-date" },
     ],
-
-    // sidebar: [
-    //   {
-    //     title: "积累成多",
-    //     path: "/",
-    //     collapsable: false, // 是否折叠
-    //     children: [
-    //       {
-    //         title: "介绍",
-    //         path: "/",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     title: "学习",
-    //     path: "/blogs",
-    //     collapsable: false, // 是否折叠
-    //     children: [
-    //       {
-    //         title: "1",
-    //         path: "/blogs/1",
-    //       },
-    //       {
-    //         title: "2",
-    //         path: "/blogs/2",
-    //       },
-    //     ],
-    //   },
-    // ],
     blogConfig: {
       //头部下拉
       category: {
@@ -59,27 +40,23 @@ module.exports = {
         },
       ],
     },
-    // locales: {
-    //   //时间格式
-    //   "/": {
-    //     lang: "zh-CN",
-    //   },
-    // },
-    subSidebar: "auto",
+
+    search: true,
     logo: "/logo.jpg",
     authorAvatar: "/logo.jpg",
+    loading: true,
     type: "blog",
-    author: "tuzi",
+    markdown: {
+      lineNumbers: true,
+    },
+
     vssueConfig: {
       platform: "github",
       owner: "OWNER_OF_REPO",
       repo: "NAME_OF_REPO",
-      clientId: "YOUR_CLIENT_ID",
-      clientSecret: "YOUR_CLIENT_SECRET",
+      clientId: "a421e64add57c76f4fee",
+      clientSecret: "19c4b7ff82b37e7f129c9fdab69983bfe00cbf5d",
     },
-    // mode: "dark",
-    // modePicker: false,
-    // 项目开始时间，只填写年份
   },
   plugins: [
     [
@@ -87,7 +64,7 @@ module.exports = {
       {
         num: 20, // 默认数量
         show: true, //  是否显示
-        zIndex: -1, // 层级
+        zIndex: 1, // 层级
         img: {
           replace: false, // false 默认图 true 换图 需要填写httpUrl地址
         },
@@ -108,7 +85,7 @@ module.exports = {
           {
             name: "思念是一种病",
             artist: "蔡鲁/张震岳 ",
-            url: "http://m10.music.126.net/20230418143106/77e28447f639e734577032cf313165d8/ymusic/4589/e2ef/ed1a/1eeea2a566519df0baecdde68e3b14b8.mp3",
+            url: "http://music.163.com/song/media/outer/url?id=5237790.mp3",
             cover: "https://assets.smallsunnyfox.com/music/3.jpg",
           },
         ],
@@ -120,13 +97,29 @@ module.exports = {
         floatStyle: { bottom: "20px", "z-index": "999999" },
       },
     ],
-  ],
-  head: [
     [
-      "meta",
+      "@vuepress-reco/vuepress-plugin-kan-ban-niang",
       {
-        name: "viewport",
-        content: "width=device-width,initial-scale=1,user-scalable=no",
+        theme: ["wanko"],
+        clean: true,
+        modelStyle: {
+          position: "fixed",
+          right: "65px",
+          bottom: "0px",
+          zIndex: 99999,
+          pointerEvents: "none",
+        },
+      },
+    ],
+    [
+      //动态标题 先安装在配置， npm install vuepress-plugin-dynamic-title --save
+      "dynamic-title",
+      {
+        showIcon: "/favicon.ico",
+        showText: "(/≧▽≦/)咦！又好了！",
+        hideIcon: "/failure.ico",
+        hideText: "(●—●)喔哟，崩溃啦！",
+        recoverTime: 2000,
       },
     ],
   ],

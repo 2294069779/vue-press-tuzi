@@ -22,11 +22,11 @@ module.exports = {
       //头部下拉
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: "文档", // 默认文案 “分类”
+        text: "分类", // 默认文案 “分类”
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认4
-        text: "Tag", // 默认文案 “标签”
+        text: "标签", // 默认文案 “标签”
       },
       socialLinks: [
         {
@@ -52,8 +52,8 @@ module.exports = {
 
     vssueConfig: {
       platform: "github",
-      owner: "OWNER_OF_REPO",
-      repo: "NAME_OF_REPO",
+      owner: "2294069779",
+      repo: "vue-press-tuzi",
       clientId: "a421e64add57c76f4fee",
       clientSecret: "19c4b7ff82b37e7f129c9fdab69983bfe00cbf5d",
     },

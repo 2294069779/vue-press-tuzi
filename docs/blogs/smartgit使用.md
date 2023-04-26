@@ -4,8 +4,8 @@ date: 2023-4-20
 categories:
   - 工具
 tags:
-  - smartGit
-  - 破解
+  - git
+  - 版本管理
 sticky: 1
 ---
 

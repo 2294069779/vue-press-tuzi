@@ -84,7 +84,7 @@ module.exports = {
         audios: [
           {
             name: "思念是一种病",
-            artist: "蔡鲁/张震岳 ",
+            artist: "蔡健雅/张震岳 ",
             url: "http://music.163.com/song/media/outer/url?id=5237790.mp3",
             cover: "https://assets.smallsunnyfox.com/music/3.jpg",
           },

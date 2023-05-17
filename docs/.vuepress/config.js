@@ -101,13 +101,18 @@ module.exports = {
       "@vuepress-reco/vuepress-plugin-kan-ban-niang",
       {
         theme: ["wanko"],
-        clean: true,
+        clean: false,
         modelStyle: {
           position: "fixed",
-          right: "65px",
+          right: "100px",
           bottom: "0px",
           zIndex: 99999,
-          pointerEvents: "none",
+        },
+        messages: {
+          welcome: "欢迎来到我的博客",
+          home: "心里的花，我想要带你回家",
+          theme: "好吧，希望你能喜欢我的其他小伙伴。",
+          close: "再见哦",
         },
       },
     ],

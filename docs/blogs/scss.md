@@ -9,15 +9,19 @@ tags:
 sticky: 1
 ---
 
-#### sass
+#### scss
 
-安装sass
+```使用
+scss是sass的升级版
 
+安装scss
 npm i sass
 
 使用
-
 lang="scss"
+```
+
+
 
 
 

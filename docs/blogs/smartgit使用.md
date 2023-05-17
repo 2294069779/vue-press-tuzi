@@ -21,3 +21,21 @@ sticky: 1
 ~/Library/Preferences/SmartGit/20.2/preferences.yml
 ~/Library/Preferences/SmartGit/20.2/license
 ```
+
+
+
+配置
+
+```选择
+选择免费试用三十天， 许可证类型 Continue Anyway  用户名YiPengGuo,选择SmartGit作为SSH客户端，选择日志历史，
+```
+
+![1684144154184](C:\Users\wangqin\AppData\Roaming\Typora\typora-user-images\1684144154184.png)
+
+###### 配置-首选项
+
+- 代理-不使用代理
+- 更新-检查并提醒
+
+
+
